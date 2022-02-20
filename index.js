@@ -1,8 +1,10 @@
 require("dotenv").config();
 const express = require("express");
+const cors = require("cors");
 var axios = require("axios");
 
 const app = express();
+app.use(cors());
 require("./config/database");
 
 const Video = require("./models/video");
